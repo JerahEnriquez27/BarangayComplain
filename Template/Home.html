@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-image: url("IMG/BG.jpg");
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            height: 100vh;
+        }
+
+        nav {
+            width: 100%;
+            background-color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+        }
+
+        .navtitle {
+            font-size: 22px;
+            font-weight: bold;
+            color: #004d80;
+        }
+
+        .navbutton a {
+            text-decoration: none;
+            color: #007acc;
+            font-weight: bold;
+            padding: 8px 14px;
+            border: 1px solid #007acc;
+            border-radius: 5px;
+            margin-left: 10px;
+        }
+
+        .complaintcontainer {
+            max-width: 600px;
+            margin: 80px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #004d80;
+            margin-top: 0;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #00334d;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            font-size: 15px;
+            border: 1px solid #007acc;
+            border-radius: 5px;
+            resize: none;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 15px;
+            border: 1px solid #007acc;
+            border-radius: 5px;
+            resize: none;
+            height: 100px;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            font-size: 15px;
+            border: 1px solid #007acc;
+            border-radius: 5px;
+            resize: none;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 20px;
+            padding: 10px;
+            background: #007acc;
+            color: white;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="navtitle">Barangay Complaint Website</div>
+        <div class="navbutton">
+            <a href="about.html">About</a>
+            <a href="profile.html">Profile</a>
+            <a href="Main.html">Logout</a>
+        </div>
+    </nav>
+
+    <div class="complaintcontainer">
+        <h2>Post a Complaint</h2>
+
+        <label for="category">Category</label>
+        <select id="category" name="category" required>
+            <option value="">Select Category</option>
+            <option value="garbage">Garbage</option>
+            <option value="noise">Noise Disturbance</option>
+            <option value="street">Drug Issue</option>
+            <option value="others">Others</option>
+        </select>
+
+        <label for="details">Details</label>
+        <textarea placeholder="Describe your complaint" required></textarea>
+
+        <label for="location">Location</label>
+        <input type="text" placeholder="Enter Location" required>
+
+        <button>Submit Complaint</button>
+    </div>
+</body>
+</html>
