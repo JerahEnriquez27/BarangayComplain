@@ -2,89 +2,15 @@
 <html>
 <head>
     <title>Profile</title>
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            background-image: url("IMG/BG.jpg");
-            background-size: cover;
-            background-position: center;
-            margin: 0;
-            height: 100vh;
-        }
-
-        nav {
-            width: 100%;
-            background-color: white;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 50px;
-        }
-
-        .navtitle {
-            font-size: 22px;
-            font-weight: bold;
-            color: #004d80;
-        }
-
-        .navbutton a {
-            text-decoration: none;
-            color: #007acc;
-            font-weight: bold;
-            padding: 6px 12px;
-            border: 1px solid #007acc;
-            border-radius: 3px;
-            margin-left: 10px;
-        }
-
-        .profilecontainer {
-            width: 500px;
-            margin: 80px auto;
-            background-color: white;
-            padding: 30px;
-            border-radius: 8px;
-        }
-
-        h2 {
-            text-align: center;
-            color: #004d80;
-            margin-bottom: 20px;
-        }
-
-        .profileinfo {
-            line-height: 1.8;
-            color: #00334d;
-            font-size: 17px;
-        }
-
-        .profileinfo label {
-            font-weight: bold;
-        }
-
-        .editbutton {
-            width: 100%;
-            margin-top: 25px;
-            padding: 10px;
-            background-color: #007acc;
-            color: white;
-            font-weight: bold;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-    </style>
+    <link rel="stylesheet" href="{{ url_for('static', filename='profile.css') }}">
 </head>
 <body>
     <nav>
         <div class="navtitle">Barangay Complaint Website</div>
         <div class="navbutton">
-            <a href="home.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="Main.html">Logout</a>
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('about') }}">About</a>
+            <a href="{{ url_for('main') }}">Logout</a>
         </div>
     </nav>
 
@@ -99,7 +25,7 @@
             <p><label>Contact:</label> 09123456789</p>
         </div>
 
-        <button class="editbutton">Edit Profile</button>
+        <a href="{{ url_for('editprofile') }}"><button class="editbutton">Edit Profile</button></a>
     </div>
 </body>
 </html>
