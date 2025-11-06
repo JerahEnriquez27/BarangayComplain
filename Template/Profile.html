@@ -8,8 +8,11 @@
     <nav>
         <div class="navtitle">Barangay Complaint Website</div>
         <div class="navbutton">
+            <a href="{{ url_for('complaintboard') }}">Complaint Board</a>
+            <a href="{{ url_for('complain') }}">Make a Complain</a>
             <a href="{{ url_for('home') }}">Home</a>
             <a href="{{ url_for('about') }}">About</a>
+            <a href="{{ url_for('profile') }}">Profile</a>
             <a href="{{ url_for('main') }}">Logout</a>
         </div>
     </nav>
@@ -18,11 +21,11 @@
         <h2>My Profile</h2>
 
         <div class="profileinfo">
-            <p><label>Full Name:</label> Jerah</p>
-            <p><label>Username:</label> Jerah</p>
-            <p><label>Email:</label> jerah</p>
-            <p><label>Address:</label> Bajay</p>
-            <p><label>Contact:</label> 09123456789</p>
+            <p><label>Full Name:</label> {{ user.fullname }}</p>
+            <p><label>Username:</label> {{ user.username }}</p>
+            <p><label>Email:</label> {{ user.email }}</p>
+            <p><label>Address:</label> {{ user.address }}</p>
+            <p><label>Contact:</label> {{ user.contact }}</p>
         </div>
 
         <a href="{{ url_for('editprofile') }}"><button class="editbutton">Edit Profile</button></a>
