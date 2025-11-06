@@ -1,38 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Home</title>
-        <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+    <title>HomePage</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='about.css') }}">
 </head>
 <body>
     <nav>
         <div class="navtitle">Barangay Complaint Website</div>
         <div class="navbutton">
+            <a href="{{ url_for('complaintboard') }}">Complaint Board</a>
+            <a href="{{ url_for('complain') }}">Make a Complain</a>
+            <a href="{{ url_for('home') }}">Home</a>
             <a href="{{ url_for('about') }}">About</a>
             <a href="{{ url_for('profile') }}">Profile</a>
             <a href="{{ url_for('main') }}">Logout</a>
         </div>
     </nav>
 
-    <div class="complaintcontainer">
-        <h2>Post a Complaint</h2>
+    <div class="aboutcontainer">
+        <h2>Created by Jerah Enriquez</h2>
 
-        <label for="category">Category</label>
-        <select id="category" name="category" required>
-            <option value="">Select Category</option>
-            <option value="garbage">Garbage</option>
-            <option value="noise">Noise Disturbance</option>
-            <option value="street">Drug Issue</option>
-            <option value="others">Others</option>
-        </select>
+        <p>
+            The Barangay Complaint System is an online platform that lets 
+            residents quickly send complaints to the barangay without visiting the hall.<br><br>
 
-        <label for="details">Details</label>
-        <textarea placeholder="Describe your complaint" required></textarea>
-
-        <label for="location">Location</label>
-        <input type="text" placeholder="Enter Location" required>
-
-        <button>Submit Complaint</button>
+            Purpose:<br>
+            • Make reporting community issues fast and easy.<br>
+            • Help the barangay manage and respond to complaints efficiently.<br>
+            • Improve communication and transparency in the community.<br>
+            Residents can submit complaints anytime, and barangay officials can track and respond quickly, 
+            ensuring problems are solved faster.
+            
+        </p>
     </div>
 </body>
 </html>
