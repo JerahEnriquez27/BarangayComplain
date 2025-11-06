@@ -8,7 +8,10 @@
     <nav>
         <div class="navtitle">Barangay Complaint Website</div>
         <div class="navbutton">
+            <a href="{{ url_for('complaintboard') }}">Complaint Board</a>
+            <a href="{{ url_for('complain') }}">Make a Complain</a>
             <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('about') }}">About</a>
             <a href="{{ url_for('profile') }}">Profile</a>
             <a href="{{ url_for('main') }}">Logout</a>
         </div>
@@ -19,17 +22,45 @@
 
         <h3>About the Barangay Complaint System</h3>
         <p>
-            LLLLLLLLLLLLLLLLLLLL
+            The Barangay Complaint System is an online platform that allows residents to easily send their complaints and 
+            concerns to the barangay. It is designed to help people report problems happening in their community, 
+            such as noise disturbances, garbage issues, damaged facilities, neighborhood conflicts, or any situation that 
+            needs barangay attention.<br><br>
+
+            This system makes the complaint process faster and more convenient. Instead of physically going to the 
+            barangay hall, lining up, or filling out manual forms, residents can submit their complaints anytime and
+             anywhere using a computer or mobile device. It helps the barangay respond more quickly 
+             because the complaints are organized, recorded, and received in real time.<br><br>
+
+            Through this system, residents can feel more confident that their concerns are heard, properly 
+            documented, and monitored until they are resolved. It promotes transparency, faster communication, and 
+            better service for the community.<br><br>
         </p>
 
         <h3>Objectives of the System</h3>
         <p>
-            LLLLLLLLLLLLLLLLLLLLLLL
+            To give residents an easy way to report complaints<br>
+
+            To make sure problems are answered quickly<br>
+
+            To improve communication between residents and barangay officials<br>
+
+            To keep records of all complaints for proper tracking<br>
+
+            To make the complaint process faster and more organized<br>
         </p>
 
         <h3>How It Works</h3>
         <p>
-            LLLLLLLLLLLLLLLLLLLLL
+            1.Register or Log In – Create an account or sign in to access the system.<br>
+
+            2.Submit a Complaint – Fill in your complaint details and send it.<br>
+
+            3.Review – Barangay officials check and verify the complaint.<br>
+
+            4.Action – The barangay works on solving the issue.<br>
+
+            5.Status Update – Residents can check the complaint’s status until it is resolved.<br>
         </p>
     </div>
 </body>
