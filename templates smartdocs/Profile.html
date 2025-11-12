@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profile</title>
+</head>
+<style>
+    html {
+        scrollbar-gutter: stable;
+    }
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        background-image: url("{{ url_for('static', filename='BG.jpg') }}");
+        background-size: cover;
+        background-position: center;
+        margin: 0;
+        height: 100vh;
+    }
+
+    nav {
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    
+    }
+
+    .navtitle {
+        font-size: 22px;
+        font-weight: bold;
+        color: #004d80;
+    }
+
+    .navbutton a {
+        text-decoration: none;
+        color: #007acc;
+        font-weight: bold;
+        padding: 6px 12px;
+        border: 1px solid #007acc;
+        border-radius: 3px;
+        margin-left: 10px;
+    }
+
+    .profilecontainer {
+        width: 500px;
+        margin: 80px auto;
+        background-color: white;
+        padding: 30px;
+        border-radius: 8px;
+    }
+
+    h2 {
+        text-align: center;
+        color: #004d80;
+        margin-bottom: 20px;
+    }
+
+    .profileinfo {
+        line-height: 1.8;
+        color: #00334d;
+        font-size: 17px;
+    }
+
+    .profileinfo label {
+        font-weight: bold;
+    }
+
+    .editbutton {
+        width: 100%;
+        margin-top: 25px;
+        padding: 10px;
+        background-color: #007acc;
+        color: white;
+        font-weight: bold;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+</style>
+<body>
+    <nav>
+        <div class="navtitle">SmartDocs System</div>
+        <div class="navbutton">
+            <a href="{{ url_for('requestboard') }}">Request Board</a>
+            <a href="{{ url_for('requestchoice') }}">Make a Request</a>
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('about') }}">About</a>
+            <a href="{{ url_for('notification') }}">Notification</a>
+            <a href="{{ url_for('profile') }}">Profile</a>
+            <a href="{{ url_for('history') }}">History</a>
+            <a href="{{ url_for('main') }}">Logout</a>
+        </div>
+    </nav>
+
+    <div class="profilecontainer">
+        <h2>My Profile</h2>
+
+        <div class="profileinfo">
+            <p><label>Full Name:</label> {{ user.fullname }}</p>
+            <p><label>Username:</label> {{ user.username }}</p>
+            <p><label>Email:</label> {{ user.email }}</p>
+            <p><label>Address:</label> {{ user.address }}</p>
+            <p><label>Contact:</label> {{ user.contact }}</p>
+            <p><label>Date of Birth:</label> {{ user.dob }}</p>
+            <p><label>Gender:</label> {{ user.gender }}</p>
+        </div>
+
+        <a href="{{ url_for('editprofile') }}"><button class="editbutton">Edit Profile</button></a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Request Page</title>
+</head>
+<style>
+    html {
+            overflow-y: scroll;
+    }
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        background-image: url("{{ url_for('static', filename='BG.jpg') }}");
+        background-size: cover;
+        background-position: center;
+        margin: 0;
+        height: 100vh;
+    }
+
+    nav {
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    
+    }
+
+    .navtitle {
+        font-size: 22px;
+        font-weight: bold;
+        color: #004d80;
+    }
+
+    .navbutton a {
+        text-decoration: none;
+        color: #007acc;
+        font-weight: bold;
+        padding: 6px 12px;
+        border: 1px solid #007acc;
+        border-radius: 3px;
+        margin-left: 10px;
+    }
+
+    .complaintcontainer {
+        max-width: 600px;
+        margin: 80px auto;
+        background: white;
+        padding: 30px;
+        border-radius: 8px;
+    }
+
+    h2 {
+        text-align: center;
+        color: #004d80;
+        margin-bottom: 20px;
+    }
+
+    label {
+        display: block;
+        margin-top: 15px;
+        margin-bottom: 5px;
+        font-weight: bold;
+        color: #00334d;
+    }
+
+    input, select, textarea {
+        width: 100%;
+        padding: 10px;
+        font-size: 15px;
+        border: 1px solid #007acc;
+        border-radius: 5px;
+    }
+
+    textarea {
+        height: 100px;
+    }
+
+    button {
+        width: 100%;
+        margin-top: 20px;
+        padding: 10px;
+        background: #007acc;
+        color: white;
+        font-weight: bold;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+</style>
+<body>
+    <nav>
+        <div class="navtitle">SmartDocs System</div>
+        <div class="navbutton">
+            <a href="{{ url_for('requestboard') }}">Request Board</a>
+            <a href="{{ url_for('requestchoice') }}">Make a Request</a>
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('about') }}">About</a>
+            <a href="{{ url_for('notification') }}">Notification</a>
+            <a href="{{ url_for('profile') }}">Profile</a>
+            <a href="{{ url_for('history') }}">History</a>
+            <a href="{{ url_for('main') }}">Logout</a>
+        </div>
+    </nav>
+
+    <div class="complaintcontainer">
+        <h2>Choose how you want to receive your document:</h2>
+        <ul >
+        <li>Set Appointment – Schedule a visit to personally claim your requested document at the barangay office.</li>
+        <li>Request for Delivery – Have your document delivered to your registered address.</li>
+        </ul>
+            <a href="{{ url_for('appointment') }}"><button class="editbutton">Set Appointment</button></a>
+            <a href="{{ url_for('requestdocument') }}"><button class="editbutton">Request for Delivery</button></a>
+        </form>
+    </div>
+</body>
+</html>
